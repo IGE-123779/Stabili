@@ -1,6 +1,6 @@
 // Service worker do Stabili: rede primeiro, cache só se estiver offline
-const CACHE = "stabili-v1";
-const FICHEIROS = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
+const CACHE = "stabili-v2";
+const FICHEIROS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHEIROS)));
